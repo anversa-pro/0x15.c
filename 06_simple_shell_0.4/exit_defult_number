@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+#
+# valid the default number of exit
+
+# variable const with readobly
+SH="/bin/sh"
+command="exit"
+
+$ECHO "$command" | $SHELL &> /dev/null
+exit_hsh=$($ECHO "$?")
+
+$ECHO "$command" | $SH &> /dev/null
+exit_sh=$($ECHO "$?")
+
+# wait a little bit
+$SLEEP $SLEEPSECONDS
+
+# if [["$exit_hsh" -eq "$exit_sh"]]; then # bad hol
+if [[ "$exit_hsh" -eq "$exit_sh" ]]; then # god
+    print_ok
+else
+    print_ko
+    $ECHO -e "\tyour shell:"
+    $ECHO "$exit_hsh"
+    $ECHO -e "\tsystem shell:"
+    $ECHO "$exit_sh"
+fi
+
+stop_shell

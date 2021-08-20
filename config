@@ -8,6 +8,8 @@ SHELL="./simple_shell"
 #SHELL="/bin/sh"
 SLEEP=`which sleep`
 SLEEPSECONDS=1
+
+# CMDNEW=`which cmdnew`
 LTRACE=`which ltrace`
 LTRACEOUTPUTFILE="checker_ltrace_output_$R"
 ECHO=`which echo`
@@ -17,3 +19,4 @@ WC=`which wc`
 RM=`which rm`
 TOUCH=`which touch`
 CHMOD=`which chmod`
+CUT=`which cut`
