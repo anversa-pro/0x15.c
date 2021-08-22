@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-//# validate error of executable not read
+# validate error of executable not read
 command="executablenotread"
 tmp_file="checker_tmp_file_$RANDOM"
 EXPECT="0: Can't open /usr/local/bin/${command}"
