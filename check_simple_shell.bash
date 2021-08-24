@@ -16,6 +16,15 @@ function print_ko()
     echo -e "[\033[31mKO\033[37m]"
 }
 
+function print_your_output()
+{
+    echo -e "    >[\033[31mYour message\033[37m]";
+}
+
+function print_expect()
+{
+    echo -e "    >[\033[32mExpect message\033[37m]";
+}
 #######################################
 # Print OK in green, followed by a new line
 # Globals:
